@@ -7,21 +7,15 @@ struct RootHelperClient {
         FileManager.default.isExecutableFile(atPath: helperPath)
     }
 
-    /// Robustly locate a bundled helper binary. Some run configurations (previews,
-    /// test hosts) don't expose bundle resources the same way, so check common
-    /// locations: `Bundle.main` lookup and the app bundle Contents/Resources path.
     static func bundledHelperURL() -> URL? {
         if let url = Bundle.main.url(forResource: "RootHelper", withExtension: nil) {
             return url
         }
-
-        // Fallback to manual Contents/Resources path next to bundle executable.
         let bundleURL = Bundle.main.bundleURL
         let candidate = bundleURL.appendingPathComponent("Contents/Resources/RootHelper")
         if FileManager.default.fileExists(atPath: candidate.path) {
             return candidate
         }
-
         return nil
     }
 
@@ -33,7 +27,6 @@ struct RootHelperClient {
         guard let src = bundledHelperURL()?.path else {
             return (false, "Bundled helper not found in app resources")
         }
-
         let cmd = "install -m 0755 '\(src)' '\(helperPath)' && chown root:wheel '\(helperPath)' && chmod 4755 '\(helperPath)'"
         let appleScript = "do shell script \"\(cmd)\" with administrator privileges"
 
@@ -53,7 +46,6 @@ struct RootHelperClient {
         }
 
         proc.waitUntilExit()
-
         let errData = errPipe.fileHandleForReading.readDataToEndOfFile()
         let err = String(data: errData, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
 
@@ -68,7 +60,6 @@ struct RootHelperClient {
         guard isHelperInstalled() else {
             return (false, "Helper not installed at \(helperPath)")
         }
-
         let proc = Process()
         proc.executableURL = URL(fileURLWithPath: helperPath)
         proc.arguments = [url]
@@ -99,6 +90,55 @@ struct RootHelperClient {
 
     static func installDeb(atPath path: String) -> (Bool, String?) {
         return installDebDirectly(atPath: path)
+    }
+
+    static func removePackage(named packageName: String) -> (Bool, String?) {
+        guard let dpkgPath = locateDpkgPath() else {
+            return (false, "Could not locate dpkg under /opt/procursus")
+        }
+
+        let procursusPath = [
+            "/opt/procursus/bin",
+            "/opt/procursus/usr/bin",
+            "/opt/procursus/sbin",
+            "/opt/procursus/usr/sbin",
+            "/usr/bin",
+            "/bin",
+            "/usr/sbin",
+            "/sbin"
+        ].joined(separator: ":")
+
+        // Use -r to remove the package but keep config files; callers can change to --purge if desired
+            let shellCommand = "env PATH=\"\(procursusPath)\" \"\(dpkgPath)\" -r \(shellQuoted(packageName))"
+        // Note: appleScriptQuoted will escape the entire shell command
+        let appleScript = "do shell script \(appleScriptQuoted(shellCommand)) with administrator privileges"
+
+        let proc = Process()
+        proc.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+        proc.arguments = ["-e", appleScript]
+
+        let outPipe = Pipe()
+        let errPipe = Pipe()
+        proc.standardOutput = outPipe
+        proc.standardError = errPipe
+
+        do {
+            try proc.run()
+        } catch {
+            return (false, "Failed to launch elevation prompt: \(error.localizedDescription)")
+        }
+
+        proc.waitUntilExit()
+        let outData = outPipe.fileHandleForReading.readDataToEndOfFile()
+        let errData = errPipe.fileHandleForReading.readDataToEndOfFile()
+        let out = String(data: outData, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let err = String(data: errData, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if proc.terminationStatus == 0 {
+            return (true, nil)
+        }
+
+        return (false, err ?? out ?? "Uninstaller exited with code \(proc.terminationStatus)")
     }
 
     private static func installDebDirectly(atPath path: String) -> (Bool, String?) {
