@@ -1,0 +1,142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1E1E1E11E1E1E1E1E1E1E1 /* root_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = root_helper.c; sourceTree = "<group>"; };
+		E1E1E1E11E1E1E1E1E1E1E4 /* RootHelper */ = {isa = PBXFileReference; explicitFileType = file; path = RootHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E1E1E11E1E1E1E1E1E1E5 /* RootHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RootHelper.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		90656E802FC159A700D3AE5D /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1E1E1E11E1E1E1E1E1E1E6 = {
+			isa = PBXGroup;
+			children = (
+				E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */,
+				E1E1E1E11E1E1E1E1E1E1E5 /* RootHelper.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		E1E1E1E11E1E1E1E1E1E1EC = {
+			isa = PBXGroup;
+			children = (
+				E1E1E1E11E1E1E1E1E1E1E4 /* RootHelper */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1E1E1E11E1E1E1E1E1E1E8 /* RootHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E1E1E11E1E1E1E1E1E1E9 /* Build configuration list for PBXNativeTarget "RootHelper" */;
+			buildPhases = (
+				E1E1E1E11E1E1E1E1E1E1E7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RootHelper;
+			productName = RootHelper;
+			productReference = E1E1E1E11E1E1E1E1E1E1E4 /* RootHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1E1E1E11E1E1E1E1E1E1EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1330;
+			};
+			buildConfigurationList = E1E1E1E11E1E1E1E1E1E1EB /* Build configuration list for PBXProject "RootHelper" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1E1E1E11E1E1E1E1E1E1E6;
+			productRefGroup = E1E1E1E11E1E1E1E1E1E1EC;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 90656E802FC159A700D3AE5D /* Products */;
+					ProjectRef = E1E1E1E11E1E1E1E1E1E1E5 /* RootHelper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E1E1E1E11E1E1E1E1E1E1E8 /* RootHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1E1E1E11E1E1E1E1E1E1E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E1E1E11E1E1E1E1E1E1E1 /* root_helper.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E1E1E1E11E1E1E1E1E1E1EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = RootHelper;
+			};
+			name = Debug;
+		};
+		E1E1E1E11E1E1E1E1E1E1EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 2;
+				PRODUCT_NAME = RootHelper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1E1E1E11E1E1E1E1E1E1E9 /* Build configuration list for PBXNativeTarget "RootHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E1E1E11E1E1E1E1E1E1EE /* Debug */,
+				E1E1E1E11E1E1E1E1E1E1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E1E1E11E1E1E1E1E1E1EB /* Build configuration list for PBXProject "RootHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E1E1E11E1E1E1E1E1E1EE /* Debug */,
+				E1E1E1E11E1E1E1E1E1E1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1E1E1E11E1E1E1E1E1E1EA /* Project object */;
+}

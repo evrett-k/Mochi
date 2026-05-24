@@ -13,6 +13,7 @@
 /* Begin PBXFileReference section */
 		904825732FC04BBB001A43CC /* Mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "procursus-bootstrap.sh"; sourceTree = "<group>"; };
+		9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RootHelper/RootHelper.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,13 +41,21 @@
 				904825752FC04BBB001A43CC /* Mochi */,
 				904825742FC04BBB001A43CC /* Products */,
 				90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */,
+				9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
-		904825742FC04BBB001A43CC /* Products */ = {
+			904825742FC04BBB001A43CC /* Products */ = {
+				isa = PBXGroup;
+				children = (
+					904825732FC04BBB001A43CC /* Mochi.app */,
+				);
+				name = Products;
+				sourceTree = "<group>";
+			};
+		90656E822FC159A700D3AE5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				904825732FC04BBB001A43CC /* Mochi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +74,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7C7C7C7C7C7C7C7C7C7C7C7C /* RootHelper dependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				904825752FC04BBB001A43CC /* Mochi */,
@@ -103,6 +113,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 904825742FC04BBB001A43CC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 90656E822FC159A700D3AE5D /* Products */;
+					ProjectRef = 9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				904825722FC04BBB001A43CC /* Mochi */,
@@ -120,6 +136,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+
+
+/* Begin PBXBuildFile section */
+/* End PBXBuildFile section */
+/* End PBXBuildFile section */
+
+/* End PBXCopyFilesBuildPhase section */
+
+/* End PBXReferenceProxy section */
+
+/* Begin PBXContainerItemProxy section */
+		8B8B8B8B8B8B8B8B8B8B8B8B /* RootHelper container proxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E1E1E11E1E1E1E1E1E1EA /* Project object */;
+			remoteInfo = RootHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		7C7C7C7C7C7C7C7C7C7C7C7C /* RootHelper dependency */ = {
+			isa = PBXTargetDependency;
+			target = E1E1E1E11E1E1E1E1E1E1E8 /* RootHelper */;
+			targetProxy = 8B8B8B8B8B8B8B8B8B8B8B8B;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9048256F2FC04BBB001A43CC /* Sources */ = {
@@ -261,7 +305,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3294HQD53M;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -293,7 +337,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3294HQD53M;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;

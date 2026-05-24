@@ -70,3 +70,6 @@ fastlane/test_output
 .AppleDouble
 .LSOverride
 Icon?
+
+# data
+DerivedData/
