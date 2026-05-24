@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct SourcesPage: View {
     @EnvironmentObject var appState: AppState
     @State private var showingAddSource = false

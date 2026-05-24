@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct DownloadsPage: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var queue = InstallQueue.shared

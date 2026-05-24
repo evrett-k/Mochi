@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct UpdateEntry: Identifiable {
     let id = UUID()
     let name: String
@@ -9,6 +10,7 @@ struct UpdateEntry: Identifiable {
     let package: Package
 }
 
+@available(macOS 13.0, *)
 struct UpdatesPage: View {
     @State private var entries: [UpdateEntry] = []
     @State private var loading = false

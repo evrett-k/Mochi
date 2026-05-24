@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct SearchResult: Identifiable {
     let id: UUID
     let repo: String
@@ -12,6 +13,7 @@ struct SearchResult: Identifiable {
     }
 }
 
+@available(macOS 13.0, *)
 struct SearchPage: View {
     @State private var query: String = ""
     @State private var results: [SearchResult] = []

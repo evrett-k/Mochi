@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
 

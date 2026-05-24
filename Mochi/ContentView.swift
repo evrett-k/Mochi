@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct ContentView: View {
     @State private var selection: Int = 0
     @State private var showingHelperInstallPrompt = false
@@ -135,5 +136,9 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    if #available(macOS 13.0, *) {
+        ContentView()
+    } else {
+        LegacyContentView()
+    }
 }

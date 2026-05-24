@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct AddSourceView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var sourceURL = ""
