@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
@@ -18,3 +19,4 @@ struct SettingsView: View {
         }
     }
 }
+#endif

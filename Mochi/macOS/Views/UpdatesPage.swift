@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct UpdateEntry: Identifiable {
     let id = UUID()
@@ -77,10 +78,11 @@ struct UpdatesPage: View {
                                     }
                                 }
                                 .buttonStyle(.plain)
+                                Spacer()
                                 Button(action: {
                                     InstallQueue.shared.enqueue(repository: entry.repository, package: entry.package, reason: "update")
                                 }) {
-                                    Label("Queue", systemImage: "tray.and.arrow.down")
+                                    Image(systemName: "tray.and.arrow.down")
                                         .font(.caption)
                                         .padding(.horizontal, 10)
                                         .padding(.vertical, 6)
@@ -146,3 +148,4 @@ struct UpdatesPage: View {
         entries = newEntries.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
     }
 }
+#endif

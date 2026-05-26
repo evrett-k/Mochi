@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct DownloadsPage: View {
     @Environment(\.dismiss) private var dismiss
@@ -116,3 +117,4 @@ struct DownloadsPage: View {
         }
     }
 }
+#endif

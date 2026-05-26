@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct SourcesPage: View {
     @EnvironmentObject var appState: AppState
@@ -39,9 +40,23 @@ struct SourcesPage: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-                }
 
-                // Queue and Settings are provided by the host NavigationStack toolbar
+                    Button {
+                        appState.showingDownloads = true
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: "tray.and.arrow.down")
+                                .foregroundColor(.blue)
+                            Text("Queue")
+                        }
+                    }
+
+                    Button {
+                        appState.showingSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
             }
             .sheet(isPresented: $showingAddSource) {
                 AddSourceView { saved in
@@ -53,6 +68,7 @@ struct SourcesPage: View {
         }
     }
 }
+#endif
 
 private struct QueueButton: View {
     let repositoryURL: String
@@ -65,7 +81,7 @@ private struct QueueButton: View {
             HStack(spacing: 6) {
                 Image(systemName: "tray.and.arrow.down")
                     .font(.caption)
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.blue)
                 Text("Queue")
                     .font(.caption)
             }

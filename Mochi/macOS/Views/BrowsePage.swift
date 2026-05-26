@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 struct BrowsePage: View {
     var body: some View {
         VStack {
@@ -12,3 +13,4 @@ struct BrowsePage: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+#endif

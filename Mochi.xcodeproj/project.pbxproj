@@ -7,7 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0B0B0B0B0B0B0B0B0B0B0B /* Mochi/iOS/AddSourceView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */; };
+		313131313131313131313131 /* Mochi/iOS/Views/UpdatePage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */; };
+		323232323232323232323232 /* Mochi/iOS/Views/SearchPage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */; };
+		5F5F5F5F5F5F5F5F5F5F5F5F /* Mochi/iOS/ContentView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */; };
+		6F6F6F6F6F6F6F6F6F6F6F6F /* Mochi/iOS/Views/Helpers_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */; };
+		7F7F7F7F7F7F7F7F7F7F7F7F /* Mochi/iOS/Views/OtherPages_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */; };
+		8F8F8F8F8F8F8F8F8F8F8F8F /* Mochi/iOS/Views/SourcesPage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */; };
 		90656E2D2FC0ED6500D3AE5D /* procursus-bootstrap.sh in Resources */ = {isa = PBXBuildFile; fileRef = 90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */; };
+		B8B8B8B8B8B8B8B8B8B8B8B8 /* Mochi/iOS/RootHelperClient_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */; };
+		C1C1C1C1C1C1C1C1C1C1C1C1C /* Mochi/core/Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */; };
+		C2C2C2C2C2C2C2C2C2C2C2C2C /* Mochi/core/Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */; };
+		C3C3C3C3C3C3C3C3C3C3C3C3C /* Mochi/core/Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */; };
+		C4C4C4C4C4C4C4C4C4C4C4C4C /* Mochi/core/Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */; };
+		C6C6C6C6C6C6C6C6C6C6C6C6C /* Mochi/Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */; };
+		C7C7C7C7C7C7C7C7C7C7C7C7C /* Mochi/MochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */; };
+		C8C8C8C8C8C8C8C8C8C8C8C8C /* Mochi/iOS-legacy/LegacyViews_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */; };
+		D8D8D8D8D8D8D8D8D8D8D8D8D8 /* Mochi/iOS/AppState_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */; };
+		E1E1E1E1E1E1E1E1E1E1E1E1 /* Mochi/iPadOS/ContentView_iPadOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */; };
+		E2E2E2E2E2E2E2E2E2E2E2E2 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,9 +39,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/AddSourceView_iOS.swift; sourceTree = "<group>"; };
+		1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/ContentView_iOS.swift; sourceTree = "<group>"; };
+		2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/UpdatePage_iOS.swift; sourceTree = "<group>"; };
+		2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/SearchPage_iOS.swift; sourceTree = "<group>"; };
+		2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/Helpers_iOS.swift; sourceTree = "<group>"; };
+		3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/OtherPages_iOS.swift; sourceTree = "<group>"; };
+		4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/SourcesPage_iOS.swift; sourceTree = "<group>"; };
+		5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/AppState_iOS.swift; sourceTree = "<group>"; };
 		904825732FC04BBB001A43CC /* Mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "procursus-bootstrap.sh"; sourceTree = "<group>"; };
 		9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RootHelper/RootHelper.xcodeproj; sourceTree = "<group>"; };
+		A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Models.swift; sourceTree = "<group>"; };
+		A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Installer.swift; sourceTree = "<group>"; };
+		A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Persistence.swift; sourceTree = "<group>"; };
+		A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Queue.swift; sourceTree = "<group>"; };
+		A5A5A5A5A5A5A5A5A5A5A5A5 /* Mochi/core/RootHelperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/RootHelperClient.swift; sourceTree = "<group>"; };
+		A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/Item.swift; sourceTree = "<group>"; };
+		A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/MochiApp.swift; sourceTree = "<group>"; };
+		A8A8A8A8A8A8A8A8A8A8A8A8 /* Mochi/core/SimulatorConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/SimulatorConnector.swift; sourceTree = "<group>"; };
+		A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mochi/iOS-legacy/LegacyViews_iOS.swift"; sourceTree = "<group>"; };
+		B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/RootHelperClient_iOS.swift; sourceTree = "<group>"; };
+		E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iPadOS/ContentView_iPadOS.swift; sourceTree = "<group>"; };
+		E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift"; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -42,9 +81,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCCCCCCCCCCCCCCCCCCCCCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90181CBF2FC3A88E00B826B6 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */,
+				2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */,
+				3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */,
+				4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */,
+				2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */,
+				2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */,
+				A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */,
+				A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */,
+				A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */,
+				A8A8A8A8A8A8A8A8A8A8A8A8 /* Mochi/core/SimulatorConnector.swift */,
+				A5A5A5A5A5A5A5A5A5A5A5A5 /* Mochi/core/RootHelperClient.swift */,
+				A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */,
+				A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */,
+				5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */,
+				E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */,
+				B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */,
+				0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */,
+				A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */,
+				A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */,
+				E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		9048256A2FC04BBB001A43CC = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +125,7 @@
 				904825742FC04BBB001A43CC /* Products */,
 				90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */,
 				9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */,
+				90181CBF2FC3A88E00B826B6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				904825732FC04BBB001A43CC /* Mochi.app */,
+				FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +169,26 @@
 			);
 			productName = Mochi;
 			productReference = 904825732FC04BBB001A43CC /* Mochi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBBBBBBBBBBBBBBBBBBBBBBB /* Mochi iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = HHHHHHHHHHHHHHHHHHHHHHHH /* Build configuration list for PBXNativeTarget "Mochi iOS" */;
+			buildPhases = (
+				EEEEEEEEEEEEEEEEEEEEEEEE /* Sources */,
+				CCCCCCCCCCCCCCCCCCCCCCCC /* Frameworks */,
+				DDDDDDDDDDDDDDDDDDDDDDDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				777777777777777777777777 /* PBXTargetDependency */,
+			);
+			name = "Mochi iOS";
+			packageProductDependencies = (
+			);
+			productName = Mochi;
+			productReference = FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				904825722FC04BBB001A43CC /* Mochi */,
+				BBBBBBBBBBBBBBBBBBBBBBBB /* Mochi iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +241,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDDDDDDDDDDDDDDDDDDDDDDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -155,9 +258,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEEEEEEEEEEEEEEEEEEEEEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5F5F5F5F5F5F5F5F5F5F5F /* Mochi/iOS/ContentView_iOS.swift in Sources */,
+				E1E1E1E1E1E1E1E1E1E1E1E1 /* Mochi/iPadOS/ContentView_iPadOS.swift in Sources */,
+				D8D8D8D8D8D8D8D8D8D8D8D8D8 /* Mochi/iOS/AppState_iOS.swift in Sources */,
+				6F6F6F6F6F6F6F6F6F6F6F6F /* Mochi/iOS/Views/Helpers_iOS.swift in Sources */,
+				0B0B0B0B0B0B0B0B0B0B0B0B /* Mochi/iOS/AddSourceView_iOS.swift in Sources */,
+				7F7F7F7F7F7F7F7F7F7F7F7F /* Mochi/iOS/Views/OtherPages_iOS.swift in Sources */,
+				8F8F8F8F8F8F8F8F8F8F8F8F /* Mochi/iOS/Views/SourcesPage_iOS.swift in Sources */,
+				C1C1C1C1C1C1C1C1C1C1C1C1C /* Mochi/core/Installer.swift in Sources */,
+				C2C2C2C2C2C2C2C2C2C2C2C2C /* Mochi/core/Models.swift in Sources */,
+				C3C3C3C3C3C3C3C3C3C3C3C3C /* Mochi/core/Persistence.swift in Sources */,
+				C4C4C4C4C4C4C4C4C4C4C4C4C /* Mochi/core/Queue.swift in Sources */,
+				C8C8C8C8C8C8C8C8C8C8C8C8C /* Mochi/iOS-legacy/LegacyViews_iOS.swift in Sources */,
+				E2E2E2E2E2E2E2E2E2E2E2E2 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift in Sources */,
+				B8B8B8B8B8B8B8B8B8B8B8B8 /* Mochi/iOS/RootHelperClient_iOS.swift in Sources */,
+				313131313131313131313131 /* Mochi/iOS/Views/UpdatePage_iOS.swift in Sources */,
+				323232323232323232323232 /* Mochi/iOS/Views/SearchPage_iOS.swift in Sources */,
+				C6C6C6C6C6C6C6C6C6C6C6C6C /* Mochi/Item.swift in Sources */,
+				C7C7C7C7C7C7C7C7C7C7C7C7C /* Mochi/MochiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		777777777777777777777777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = 8B8B8B8B8B8B8B8B8B8B8B8B /* PBXContainerItemProxy */;
+		};
 		7C7C7C7C7C7C7C7C7C7C7C7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			targetProxy = 8B8B8B8B8B8B8B8B8B8B8B8B /* PBXContainerItemProxy */;
@@ -165,6 +297,88 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		555555555555555555555555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mochi/iOS/Info_iOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mochi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		666666666666666666666666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mochi/iOS/Info_iOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mochi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9048257E2FC04BBF001A43CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -301,7 +515,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Mochi/Info.plist;
+				INFOPLIST_FILE = "Mochi/macOS/Info-mac.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +552,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Mochi/Info.plist;
+				INFOPLIST_FILE = "Mochi/macOS/Info-mac.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,6 +590,15 @@
 			buildConfigurations = (
 				904825812FC04BBF001A43CC /* Debug */,
 				904825822FC04BBF001A43CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		HHHHHHHHHHHHHHHHHHHHHHHH /* Build configuration list for PBXNativeTarget "Mochi iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555555555555555555555555 /* Debug */,
+				666666666666666666666666 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -73,3 +73,6 @@ Icon?
 
 # data
 DerivedData/
+
+# builds
+Build/

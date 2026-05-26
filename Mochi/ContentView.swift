@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct ContentView: View {
     @State private var selection: Int = 0
@@ -18,7 +19,7 @@ struct ContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -36,21 +37,6 @@ struct ContentView: View {
             NavigationStack {
                 SourcesPage()
             }
-            .toolbar {
-                ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        appState.showingDownloads = true
-                    } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
-                    }
-
-                    Button {
-                        appState.showingSettings = true
-                    } label: {
-                        Image(systemName: "gearshape")
-                    }
-                }
-            }
             .tabItem {
                 Label("Sources", systemImage: "tray.2")
             }
@@ -64,7 +50,7 @@ struct ContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -87,7 +73,7 @@ struct ContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -135,6 +121,9 @@ struct ContentView: View {
     }
 }
 
+#endif
+
+#if os(macOS)
 #Preview {
     if #available(macOS 13.0, *) {
         ContentView()
@@ -142,3 +131,4 @@ struct ContentView: View {
         LegacyContentView()
     }
 }
+#endif

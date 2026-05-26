@@ -1,7 +1,8 @@
 import SwiftUI
-#if os(macOS)
-import AppKit
 import Combine
+
+#if os(iOS)
+import UIKit
 
 func gridColumns(for width: CGFloat) -> [GridItem] {
     let count: Int
@@ -15,25 +16,21 @@ func gridColumns(for width: CGFloat) -> [GridItem] {
     return Array(repeating: GridItem(.flexible(), spacing: 12), count: count)
 }
 
-func compareVersions(_ lhs: String, _ rhs: String) -> ComparisonResult {
-    lhs.compare(rhs, options: [.numeric, .caseInsensitive, .forcedOrdering], range: nil, locale: .current)
+private final class RemoteImageCache_iOS {
+    static let shared = NSCache<NSString, UIImage>()
 }
 
-private struct RemoteImageCache {
-    static let shared = NSCache<NSString, NSImage>()
-}
-
-final class RemoteImageLoader: ObservableObject {
-    @Published var image: NSImage?
+final class RemoteImageLoader_iOS: ObservableObject {
+    @Published var image: UIImage?
 
     init(urlString: String, assetName: String) {
-        if let cached = RemoteImageCache.shared.object(forKey: urlString as NSString) {
+        if let cached = RemoteImageCache_iOS.shared.object(forKey: urlString as NSString) {
             self.image = cached
             return
         }
 
-        if assetName != "CydiaIcon", let local = NSImage(named: NSImage.Name(assetName)) {
-            RemoteImageCache.shared.setObject(local, forKey: urlString as NSString)
+        if assetName != "CydiaIcon", let local = UIImage(named: assetName) {
+            RemoteImageCache_iOS.shared.setObject(local, forKey: urlString as NSString)
             self.image = local
             return
         }
@@ -48,20 +45,14 @@ final class RemoteImageLoader: ObservableObject {
 
         func tryNext(_ idx: Int) {
             if idx >= candidates.count {
-                if let local = NSImage(named: NSImage.Name(assetName)) {
-                    RemoteImageCache.shared.setObject(local, forKey: urlString as NSString)
+                if let local = UIImage(named: assetName) {
+                    RemoteImageCache_iOS.shared.setObject(local, forKey: urlString as NSString)
                     DispatchQueue.main.async { self.image = local }
                     return
                 }
 
-                if let cydia = NSImage(named: NSImage.Name("CydiaIcon")) {
-                    RemoteImageCache.shared.setObject(cydia, forKey: urlString as NSString)
-                    DispatchQueue.main.async { self.image = cydia }
-                    return
-                }
-
-                if let sys = NSImage(systemSymbolName: "archivebox.fill", accessibilityDescription: nil) {
-                    RemoteImageCache.shared.setObject(sys, forKey: urlString as NSString)
+                if let sys = UIImage(systemName: "archivebox.fill") {
+                    RemoteImageCache_iOS.shared.setObject(sys, forKey: urlString as NSString)
                     DispatchQueue.main.async { self.image = sys }
                 }
                 return
@@ -79,9 +70,9 @@ final class RemoteImageLoader: ObservableObject {
                     return
                 }
 
-                if let d = data, let ns = NSImage(data: d) {
-                    RemoteImageCache.shared.setObject(ns, forKey: urlString as NSString)
-                    DispatchQueue.main.async { self.image = ns }
+                if let d = data, let ui = UIImage(data: d) {
+                    RemoteImageCache_iOS.shared.setObject(ui, forKey: urlString as NSString)
+                    DispatchQueue.main.async { self.image = ui }
                 } else {
                     tryNext(idx + 1)
                 }
@@ -92,17 +83,17 @@ final class RemoteImageLoader: ObservableObject {
     }
 }
 
-struct RepositoryIcon: View {
-    @StateObject private var loader: RemoteImageLoader
+struct RepositoryIcon_iOS: View {
+    @StateObject private var loader: RemoteImageLoader_iOS
 
     init(urlString: String, assetName: String) {
-        _loader = StateObject(wrappedValue: RemoteImageLoader(urlString: urlString, assetName: assetName))
+        _loader = StateObject(wrappedValue: RemoteImageLoader_iOS(urlString: urlString, assetName: assetName))
     }
 
     var body: some View {
         Group {
             if let img = loader.image {
-                Image(nsImage: img)
+                Image(uiImage: img)
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

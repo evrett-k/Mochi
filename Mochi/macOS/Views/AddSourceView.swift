@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct AddSourceView: View {
     @Environment(\.dismiss) private var dismiss
@@ -69,3 +70,4 @@ struct AddSourceView: View {
         }
     }
 }
+#endif

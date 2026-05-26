@@ -25,6 +25,12 @@ public class InstallQueue: ObservableObject {
 
     private init() {}
 
+    private func log(_ message: String, enabled: Bool, handler: ((String) -> Void)? = nil) {
+        guard enabled else { return }
+        handler?(message)
+        NSLog("[Queue] %@", message)
+    }
+
     public func enqueue(repository: String, package: Package, reason: String = "install") {
         var entry = QueueEntry(repository: repository, package: package, reason: reason)
         // quick dependency scan
@@ -55,20 +61,27 @@ public class InstallQueue: ObservableObject {
         DispatchQueue.main.async { self.entries.removeAll() }
     }
 
-    public func installAll() async {
+    public func installAll(debugLogging: Bool = false, logHandler: ((String) -> Void)? = nil) async {
+        log("installAll start count=\(entries.count)", enabled: debugLogging, handler: logHandler)
         for idx in entries.indices {
             await withCheckedContinuation { cont in
                 DispatchQueue.main.async { self.entries[idx].status = .installing; cont.resume() }
             }
             let entry = entries[idx]
+            log("processing \(entry.package.name) reason=\(entry.reason) repo=\(entry.repository)", enabled: debugLogging, handler: logHandler)
             if entry.reason.lowercased().contains("remove") || entry.reason.lowercased().contains("uninstall") {
-                // perform uninstall via RootHelperClient
+#if os(macOS)
                 let (ok, msg) = await withCheckedContinuation { (cont: CheckedContinuation<(Bool,String?), Never>) in
                     DispatchQueue.global().async {
                         let res = RootHelperClient.removePackage(named: entry.package.name)
                         cont.resume(returning: res)
                     }
                 }
+#else
+                let ok = false
+                let msg: String? = "Unsupported on this platform"
+#endif
+                log("uninstall \(entry.package.name) ok=\(ok) msg=\(msg ?? "nil")", enabled: debugLogging, handler: logHandler)
                 DispatchQueue.main.async {
                     if ok {
                         self.entries[idx].status = .succeeded
@@ -80,6 +93,7 @@ public class InstallQueue: ObservableObject {
                 }
             } else {
                 let (ok, msg) = await installPackageFromRepo(pkg: entry.package, repositoryURL: entry.repository)
+                log("install \(entry.package.name) ok=\(ok) msg=\(msg ?? "nil")", enabled: debugLogging, handler: logHandler)
                 DispatchQueue.main.async {
                     if ok {
                         self.entries[idx].status = .succeeded
@@ -91,5 +105,6 @@ public class InstallQueue: ObservableObject {
                 }
             }
         }
+        log("installAll finished", enabled: debugLogging, handler: logHandler)
     }
 }

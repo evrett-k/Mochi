@@ -1,6 +1,10 @@
 import Foundation
 import Compression
+#if os(macOS)
 import AppKit
+#else
+import UIKit
+#endif
 
 public let PackagesUpdatedNotification = Notification.Name("PackagesUpdated")
 
@@ -69,8 +73,32 @@ public struct RepositorySource: Identifiable {
     public let iconName: String
 }
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+private enum SimulatorConnectorFallback {
+    static func hostSourcesFileURL() -> URL? {
+        #if targetEnvironment(simulator)
+        let env = ProcessInfo.processInfo.environment
+        if let hostHome = env["SIMULATOR_HOST_HOME"] {
+            let candidate = URL(fileURLWithPath: hostHome).appendingPathComponent("opt/procursus/etc/apt/sources.list.d/procursus.sources")
+            if FileManager.default.fileExists(atPath: candidate.path) { return candidate }
+        }
+        let direct = URL(fileURLWithPath: "/opt/procursus/etc/apt/sources.list.d/procursus.sources")
+        if FileManager.default.fileExists(atPath: direct.path) { return direct }
+        #endif
+        return nil
+    }
+}
+#endif
+
 public enum RepositoryCatalog {
-    private static let sourcesFileURL = URL(fileURLWithPath: "/opt/procursus/etc/apt/sources.list.d/procursus.sources")
+    private static var sourcesFileURL: URL {
+        #if os(iOS) || os(tvOS) || os(watchOS)
+        if let host = SimulatorConnectorFallback.hostSourcesFileURL() {
+            return host
+        }
+        #endif
+        return URL(fileURLWithPath: "/opt/procursus/etc/apt/sources.list.d/procursus.sources")
+    }
 
     public static func load() -> [RepositorySource] {
         guard let contents = try? String(contentsOf: sourcesFileURL, encoding: .utf8) else {
@@ -204,9 +232,15 @@ public enum RepositoryCatalog {
         }
 
         for c in candidates {
+#if os(macOS)
             if NSImage(named: NSImage.Name(c)) != nil {
                 return c
             }
+#else
+            if UIImage(named: c) != nil {
+                return c
+            }
+#endif
         }
 
         return "CydiaIcon"

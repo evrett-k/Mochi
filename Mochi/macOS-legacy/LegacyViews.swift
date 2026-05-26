@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 struct LegacyContentView: View {
     @State private var selection: Int = 0
     @State private var showingHelperInstallPrompt = false
@@ -17,7 +18,7 @@ struct LegacyContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -40,7 +41,7 @@ struct LegacyContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -63,7 +64,7 @@ struct LegacyContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -86,7 +87,7 @@ struct LegacyContentView: View {
                     Button {
                         appState.showingDownloads = true
                     } label: {
-                        Label("Queue", systemImage: "tray.and.arrow.down")
+                        Image(systemName: "tray.and.arrow.down")
                     }
 
                     Button {
@@ -133,6 +134,8 @@ struct LegacyContentView: View {
         }
     }
 }
+
+#endif
 
 private struct LegacySourcesPage: View {
     @EnvironmentObject var appState: AppState
@@ -245,7 +248,7 @@ private struct LegacyQueueButton: View {
         Button(action: {
             InstallQueue.shared.enqueue(repository: repositoryURL, package: pkg, reason: "install")
         }) {
-            Label("Queue", systemImage: "tray.and.arrow.down")
+            Image(systemName: "tray.and.arrow.down")
                 .font(.caption)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 6)
@@ -606,7 +609,7 @@ private struct LegacySearchPage: View {
                                         Button(action: {
                                             InstallQueue.shared.enqueue(repository: entry.repo, package: entry.pkg, reason: "install")
                                         }) {
-                                            Label("Queue", systemImage: "tray.and.arrow.down")
+                                            Image(systemName: "tray.and.arrow.down")
                                                 .font(.caption)
                                                 .padding(.horizontal, 10)
                                                 .padding(.vertical, 6)
@@ -647,7 +650,7 @@ private struct LegacySearchPage: View {
         }
         .sheet(isPresented: $showingNoCache) {
             VStack(spacing: 16) {
-                Text("No cached packages found")
+                Text("No packages found")
                 Text("Open Sources and let the app fetch repositories or click Reload.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -781,7 +784,7 @@ private struct LegacyUpdatesPage: View {
                             Button(action: {
                                 InstallQueue.shared.enqueue(repository: entry.repository, package: entry.package, reason: "update")
                             }) {
-                                Label("Queue", systemImage: "tray.and.arrow.down")
+                                Image(systemName: "tray.and.arrow.down")
                                     .font(.caption)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 6)

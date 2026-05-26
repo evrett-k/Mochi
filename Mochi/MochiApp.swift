@@ -6,18 +6,31 @@
 //
 
 import SwiftUI
+#if os(macOS)
 import AppKit
-import UniformTypeIdentifiers
 import CoreServices
+#elseif os(iOS)
+import UIKit
+#endif
+import UniformTypeIdentifiers
 
 @main
 struct MochiApp: App {
+    #if os(iOS)
+    private var forceIPadRoot: Bool {
+        ProcessInfo.processInfo.arguments.contains("--mochi-force-ipad-root")
+    }
+    #endif
+
     init() {
         // No-op init. Previous attempt to set NSScroller.preferredScrollerStyle
         // caused a compile error because the property is get-only in this SDK.
+        #if os(macOS)
         checkDefaultHandlerForDeb()
+        #endif
     }
 
+    #if os(macOS)
     func checkDefaultHandlerForDeb() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             guard let ut = UTType(filenameExtension: "deb")?.identifier else { return }
@@ -47,14 +60,33 @@ struct MochiApp: App {
             }
         }
     }
+    #endif
 
     var body: some Scene {
         WindowGroup {
+            #if os(iOS)
+            if #available(iOS 16.0, *) {
+                if forceIPadRoot || UIDevice.current.userInterfaceIdiom == .pad {
+                    ContentView_iPadOS()
+                } else {
+                    ContentView_iOS()
+                }
+            } else {
+                if forceIPadRoot || UIDevice.current.userInterfaceIdiom == .pad {
+                    LegacyContentView_iPadOS()
+                } else {
+                    LegacyContentView_iOS()
+                }
+            }
+            #elseif os(macOS)
             if #available(macOS 13.0, *) {
                 ContentView()
             } else {
                 LegacyContentView()
             }
+            #else
+            Text("Unsupported platform")
+            #endif
         }
     }
 }

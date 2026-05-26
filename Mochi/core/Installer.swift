@@ -1,6 +1,7 @@
 import Foundation
 
 public func isCLIPresentSync(_ name: String) -> Bool {
+#if os(macOS)
     let which = "/usr/bin/which"
     let p = Process()
     p.executableURL = URL(fileURLWithPath: which)
@@ -12,6 +13,9 @@ public func isCLIPresentSync(_ name: String) -> Bool {
     } catch {
         return false
     }
+#else
+    return false
+#endif
 }
 
 public func bestFilenameMatch(in packages: [Package], targetName: String, targetVersion: String?, targetArch: String?) -> String? {
@@ -50,7 +54,7 @@ public func resolveFilenameFromRepository(pkg: Package, repositoryURL: String) a
     let targetArch = pkg.architecture?.lowercased()
 
     if let cachedPackages = Persistence.loadPackages(for: repositoryURL) {
-        NSLog("[resolveFilenameFromRepository] checking cached packages for %@", pkg.name)
+        NSLog("[resolveFilenameFromRepository] checking packages for %@", pkg.name)
         if let match = bestFilenameMatch(in: cachedPackages, targetName: targetName, targetVersion: targetVersion, targetArch: targetArch) {
             return match
         }

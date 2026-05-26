@@ -51,7 +51,7 @@ public enum Persistence {
             let data = try Data(contentsOf: url)
             let dec = JSONDecoder()
             let file = try dec.decode(PackageCacheFile.self, from: data)
-            NSLog("[Persistence] loaded %d cached packages from %@", file.packages.count, url.path)
+            NSLog("[Persistence] loaded %d packages from %@", file.packages.count, url.path)
             return file.packages
         } catch {
             NSLog("[Persistence] load error: %@", String(describing: error))

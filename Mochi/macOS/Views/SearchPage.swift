@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(macOS)
 @available(macOS 13.0, *)
 struct SearchResult: Identifiable {
     let id: UUID
@@ -107,7 +108,7 @@ struct SearchPage: View {
                                             Button(action: {
                                                 InstallQueue.shared.enqueue(repository: entry.repo, package: entry.pkg, reason: "install")
                                             }) {
-                                                Label("Queue", systemImage: "tray.and.arrow.down")
+                                                Image(systemName: "tray.and.arrow.down")
                                                     .font(.caption)
                                                     .padding(.horizontal, 10)
                                                     .padding(.vertical, 6)
@@ -150,7 +151,7 @@ struct SearchPage: View {
             }
             .sheet(isPresented: $showingNoCache) {
                 VStack(spacing: 16) {
-                    Text("No cached packages found")
+                    Text("No packages found")
                     Text("Open Sources and let the app fetch repositories or click Reload.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
@@ -217,3 +218,4 @@ struct SearchPage: View {
         return installedVersion?.trimmingCharacters(in: .whitespacesAndNewlines) == pkgVersion
     }
 }
+#endif

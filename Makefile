@@ -3,6 +3,8 @@ SCHEME = Mochi
 CONFIG = Release
 SDK = macosx
 BUILD_DIR = build
+ARCHS = x86_64 arm64 iphoneos-arm64 iphoneos-arm64e
+IOS_ARCHS = iphoneos-arm64 iphoneos-arm64e
 
 .PHONY: all build-x86_64 build-arm64 build-universal clean
 
