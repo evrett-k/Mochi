@@ -1,4 +1,4 @@
-## Mochi is a guy package manager for macOS, iOS, iPadOS, tvOS, watchOS, and visionOS; all running under Procursus's apt/dpkg implementation. 
+## Mochi is a guy package manager for macOS, iOS, iPadOS, tvOS, watchOS, and visionOS; all running under apt/dpkg. 
 
 ---
  
