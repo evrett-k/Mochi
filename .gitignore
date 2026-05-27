@@ -72,7 +72,13 @@ fastlane/test_output
 Icon?
 
 # data
+BuildDerivedData/
 DerivedData/
+*.log
 
 # builds
 Build/
+
+# local backups
+*.bak
+old/
