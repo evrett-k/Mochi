@@ -1,5 +1,6 @@
 import Foundation
 
+#if os(macOS)
 struct RootHelperClient {
     static let helperPath = "/usr/local/bin/RootHelper"
 
@@ -108,9 +109,7 @@ struct RootHelperClient {
             "/sbin"
         ].joined(separator: ":")
 
-        // Use -r to remove the package but keep config files; callers can change to --purge if desired
-            let shellCommand = "env PATH=\"\(procursusPath)\" \"\(dpkgPath)\" -r \(shellQuoted(packageName))"
-        // Note: appleScriptQuoted will escape the entire shell command
+        let shellCommand = "env PATH=\"\(procursusPath)\" \"\(dpkgPath)\" -r \(shellQuoted(packageName))"
         let appleScript = "do shell script \(appleScriptQuoted(shellCommand)) with administrator privileges"
 
         let proc = Process()
@@ -212,3 +211,20 @@ struct RootHelperClient {
         "\"" + value.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "\"", with: "\\\"") + "\""
     }
 }
+#else
+struct RootHelperClient {
+    static func isHelperInstalled() -> Bool { false }
+
+    static func bundledHelperURL() -> URL? { nil }
+
+    static func bundledHelperExists() -> Bool { false }
+
+    static func installBundledHelper() -> (Bool, String?) { (false, "Unsupported on this platform") }
+
+    static func addRepository(url: String) -> (Bool, String?) { (false, "Unsupported on this platform") }
+
+    static func installDeb(atPath path: String) -> (Bool, String?) { (false, "Unsupported on this platform") }
+
+    static func removePackage(named packageName: String) -> (Bool, String?) { (false, "Unsupported on this platform") }
+}
+#endif
