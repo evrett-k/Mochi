@@ -9,7 +9,7 @@
 | iPadOS   | 15+     | rootless       |
 | macOS    | 12+     |                |
 | tvOS     | 15+     | rootless       |
-| watchOS  | —       | tbd            |
+| watchOS  | -       | tbd            |
 | visionOS | -       | tbd            |
 
 ### Device Statuses
