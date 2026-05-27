@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/resource.h>
 #include <unistd.h>
 #include <errno.h>
 #include <sys/stat.h>
 #include <limits.h>
 
 static const char *TARGET_PATH = "/opt/procursus/etc/apt/sources.list.d/procursus.sources";
+static const char *DPKG_PATH = "/opt/procursus/bin/dpkg";
 
 int is_url_safe(const char *url) {
     if (!url) return 0;
@@ -15,7 +17,7 @@ int is_url_safe(const char *url) {
 
 int main(int argc, char *argv[]) {
     if (geteuid() != 0) {
-        fprintf(stderr, "RootHelper: must be run as root.\n");
+        fprintf(stderr, "RootHelper: must be ran as root.\n");
         return 2;
     }
 
@@ -23,31 +25,23 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s <repository-url>\n", argv[0]);
         return 1;
     }
-    // Support two modes:
-    // 1) add repository: RootHelper <repository-url>
-    // 2) install deb: RootHelper install <absolute-path-to-deb>
-
+    
     if (strcmp(argv[1], "install") == 0) {
         if (argc < 3) {
             fprintf(stderr, "Usage: %s install <path-to-deb>\n", argv[0]);
             return 1;
         }
         const char *debpath = argv[2];
-        // Basic safety: require an absolute path
         if (debpath[0] != '/') {
             fprintf(stderr, "RootHelper: deb path must be absolute\n");
             return 3;
         }
-        // Ensure file exists
         struct stat st;
         if (stat(debpath, &st) != 0) {
             fprintf(stderr, "RootHelper: deb file not found: %s\n", debpath);
             return 4;
         }
-
-        // Execute dpkg -i <debpath>
-        execlp("dpkg", "dpkg", "-i", debpath, (char *)NULL);
-        // If execlp returns, it's an error
+        execl(DPKG_PATH, "dpkg", "-i", debpath, (char *)NULL);
         fprintf(stderr, "RootHelper: failed to exec dpkg: %s\n", strerror(errno));
         return 7;
     }

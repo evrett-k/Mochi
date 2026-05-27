@@ -4,8 +4,8 @@ TARGET=RootHelper
 
 all: $(TARGET)
 
-$(TARGET): root_helper.c
-	$(CC) $(CFLAGS) -o $(TARGET) root_helper.c
+$(TARGET): main.c
+	$(CC) $(CFLAGS) -o $(TARGET) main.c
 
 clean:
 	rm -f $(TARGET)

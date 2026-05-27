@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1E1E1E11E1E1E1E1E1E1E1 /* root_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */; };
+		E1E1E1E11E1E1E1E1E1E1E1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E1E1E1E11E1E1E1E1E1E1E2 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = root_helper.c; sourceTree = "<group>"; };
+		E1E1E1E11E1E1E1E1E1E1E2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		E1E1E1E11E1E1E1E1E1E1E4 /* RootHelper */ = {isa = PBXFileReference; explicitFileType = file; path = RootHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E1E1E11E1E1E1E1E1E1E5 /* RootHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RootHelper.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -25,7 +25,7 @@
 		E1E1E1E11E1E1E1E1E1E1E6 = {
 			isa = PBXGroup;
 			children = (
-				E1E1E1E11E1E1E1E1E1E1E2 /* root_helper.c */,
+				E1E1E1E11E1E1E1E1E1E1E2 /* main.c */,
 				E1E1E1E11E1E1E1E1E1E1E5 /* RootHelper.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E1E1E11E1E1E1E1E1E1E1 /* root_helper.c in Sources */,
+				E1E1E1E11E1E1E1E1E1E1E1 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
