@@ -11,6 +11,8 @@ import AppKit
 import CoreServices
 #elseif os(iOS)
 import UIKit
+#elseif os(tvOS)
+import UIKit
 #endif
 import UniformTypeIdentifiers
 
@@ -23,8 +25,10 @@ struct MochiApp: App {
     #endif
 
     init() {
-        // No-op init. Previous attempt to set NSScroller.preferredScrollerStyle
-        // caused a compile error because the property is get-only in this SDK.
+        #if os(tvOS)
+        UITableView.appearance().backgroundColor = .clear
+        UIScrollView.appearance().backgroundColor = .clear
+        #endif
         #if os(macOS)
         checkDefaultHandlerForDeb()
         #endif
@@ -77,6 +81,18 @@ struct MochiApp: App {
                 } else {
                     LegacyContentView_iOS()
                 }
+            }
+            #elseif os(watchOS)
+            if #available(watchOS 9.0, *) {
+                ContentView_watchOS()
+            } else {
+                Text("WatchOS 9 required")
+            }
+            #elseif os(tvOS)
+            if #available(tvOS 15.0, *) {
+                ContentView_tvOS()
+            } else {
+                Text("tvOS 15 required")
             }
             #elseif os(macOS)
             if #available(macOS 13.0, *) {
