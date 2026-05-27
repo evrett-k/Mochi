@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/_types/_pid_t.h>
 #include <sys/resource.h>
 #include <unistd.h>
 #include <errno.h>
 #include <sys/stat.h>
 #include <limits.h>
+#include <libproc.h>
 
 static const char *TARGET_PATH = "/opt/procursus/etc/apt/sources.list.d/procursus.sources";
 static const char *DPKG_PATH = "/opt/procursus/bin/dpkg";
@@ -21,6 +23,17 @@ int main(int argc, char *argv[]) {
         return 2;
     }
 
+    pid_t ppid = getppid();
+    char parentpath[PROC_PIDPATHINFO_MAXSIZE];
+    if (proc_pidpath(ppid, parentpath, sizeof(parentpath)) <= 0) {
+        fprintf(stderr, "RootHelper: cannot verify caller\n");
+        return 2;
+    }
+    if (strcmp(parentpath, "/Applications/Mochi.app/Contents/MacOS/Mochi") != 0) {
+        fprintf(stderr, "RootHelper: unauthorized caller\n");
+        return 2;
+    }
+    
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <repository-url>\n", argv[0]);
         return 1;
