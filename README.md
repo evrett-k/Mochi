@@ -1,4 +1,4 @@
-## Mochi is a guy package manager for macOS, iOS, iPadOS, tvOS, watchOS, and visionOS; all running under apt/dpkg. 
+## Mochi is a GUI package manager for macOS, iOS, iPadOS, tvOS, watchOS, and visionOS; all running under apt/dpkg. 
 
 ---
  
