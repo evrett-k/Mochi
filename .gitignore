@@ -77,6 +77,7 @@ DerivedData/
 *.log
 
 # builds
+build/
 Build/
 
 # local backups
