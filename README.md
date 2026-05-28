@@ -1,7 +1,7 @@
 ## Mochi is a GUI package manager for macOS, iOS, iPadOS, tvOS, watchOS, and visionOS; all running under apt/dpkg. 
 
 ---
- 
+
 ### Supported Versions
 | Platform | Version | Jailbreak Type |
 |----------|---------|----------------|
