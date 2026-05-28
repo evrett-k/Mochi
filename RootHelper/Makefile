@@ -5,7 +5,7 @@ TARGET=RootHelper
 all: $(TARGET)
 
 $(TARGET): main.c
-	$(CC) $(CFLAGS) -o $(TARGET) main.c
+	$(CC) $(CFLAGS) -o $(TARGET) main.c -framework Security -framework CoreFoundation
 
 clean:
 	rm -f $(TARGET)
