@@ -70,3 +70,16 @@ fastlane/test_output
 .AppleDouble
 .LSOverride
 Icon?
+
+# data
+BuildDerivedData/
+DerivedData/
+*.log
+
+# builds
+build/
+Build/
+
+# local backups
+*.bak
+old/

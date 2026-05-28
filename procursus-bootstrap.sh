@@ -1,12 +1,6 @@
-//  procursus-bootstrap.sh
-//  Mochi
-//
-//  Created by michal on 5/22/26.
-//
-
 #!/bin/bash
-// run to automatically install procursus ( apt / dpkg ) onto macOS
-// installs to /opt/procursus/ and adds bin to path
+# run to automatically install procursus ( apt / dpkg ) onto macOS
+# installs to /opt/procursus/ and adds bin to path
 
 if [ -d "/opt/procursus" ]; then
     echo "procursus is already installed"

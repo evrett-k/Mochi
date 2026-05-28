@@ -7,12 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0B0B0B0B0B0B0B0B0B0B0B /* Mochi/iOS/AddSourceView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */; };
+		313131313131313131313131 /* Mochi/iOS/Views/UpdatePage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */; };
+		323232323232323232323232 /* Mochi/iOS/Views/SearchPage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */; };
+		5F5F5F5F5F5F5F5F5F5F5F5F /* Mochi/iOS/ContentView_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */; };
+		6F6F6F6F6F6F6F6F6F6F6F6F /* Mochi/iOS/Views/Helpers_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */; };
+		7F7F7F7F7F7F7F7F7F7F7F7F /* Mochi/iOS/Views/OtherPages_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */; };
+		8F8F8F8F8F8F8F8F8F8F8F8F /* Mochi/iOS/Views/SourcesPage_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */; };
 		90656E2D2FC0ED6500D3AE5D /* procursus-bootstrap.sh in Resources */ = {isa = PBXBuildFile; fileRef = 90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */; };
+		B8B8B8B8B8B8B8B8B8B8B8B8 /* Mochi/iOS/RootHelperClient_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */; };
+		C1C1C1C1C1C1C1C1C1C1C1C1C /* Mochi/core/Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */; };
+		C2C2C2C2C2C2C2C2C2C2C2C2C /* Mochi/core/Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */; };
+		C3C3C3C3C3C3C3C3C3C3C3C3C /* Mochi/core/Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */; };
+		C4C4C4C4C4C4C4C4C4C4C4C4C /* Mochi/core/Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */; };
+		C6C6C6C6C6C6C6C6C6C6C6C6C /* Mochi/Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */; };
+		C7C7C7C7C7C7C7C7C7C7C7C7C /* Mochi/MochiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */; };
+		C8C8C8C8C8C8C8C8C8C8C8C8C /* Mochi/iOS-legacy/LegacyViews_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */; };
+		W1W1W1W1W1W1W1W1W1W1W1W1W1 /* Mochi/watchOS/Views/ContentViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF1F1F1F1F1F1F1F1F1F1F1F1 /* Mochi/watchOS/Views/ContentViews_watchOS.swift */; };
+		W2W2W2W2W2W2W2W2W2W2W2W2W2 /* Mochi/watchOS/Views/BrowseViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF2F2F2F2F2F2F2F2F2F2F2F2 /* Mochi/watchOS/Views/BrowseViews_watchOS.swift */; };
+		W3W3W3W3W3W3W3W3W3W3W3W3W3 /* Mochi/watchOS/Views/SearchViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF3F3F3F3F3F3F3F3F3F3F3F3 /* Mochi/watchOS/Views/SearchViews_watchOS.swift */; };
+		W4W4W4W4W4W4W4W4W4W4W4W4W4 /* Mochi/watchOS/Views/PackagesViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF4F4F4F4F4F4F4F4F4F4F4F4 /* Mochi/watchOS/Views/PackagesViews_watchOS.swift */; };
+		W5W5W5W5W5W5W5W5W5W5W5W5W5 /* Mochi/watchOS/Views/SourcesViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF5F5F5F5F5F5F5F5F5F5F5F5 /* Mochi/watchOS/Views/SourcesViews_watchOS.swift */; };
+		W6W6W6W6W6W6W6W6W6W6W6W6W6 /* Mochi/watchOS/Views/UpdatesViews_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF6F6F6F6F6F6F6F6F6F6F6F6 /* Mochi/watchOS/Views/UpdatesViews_watchOS.swift */; };
+		W7W7W7W7W7W7W7W7W7W7W7W7W7 /* Mochi/watchOS/AppState_watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = WF7F7F7F7F7F7F7F7F7F7F7F7 /* Mochi/watchOS/AppState_watchOS.swift */; };
+		D8D8D8D8D8D8D8D8D8D8D8D8D8 /* Mochi/iOS/AppState_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */; };
+		E1E1E1E1E1E1E1E1E1E1E1E1 /* Mochi/iPadOS/ContentView_iPadOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */; };
+		E2E2E2E2E2E2E2E2E2E2E2E2 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */; };
+		TVBFCONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILECONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift */; };
+		TVBFAPPST0000000000000000 /* Mochi/tvOS/AppState_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILEAPPST00000000000000 /* Mochi/tvOS/AppState_tvOS.swift */; };
+		TVBFBRW000000000000000000 /* Mochi/tvOS/Views/BrowsePage_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILEBRW0000000000000000 /* Mochi/tvOS/Views/BrowsePage_tvOS.swift */; };
+		TVBFSRC000000000000000000 /* Mochi/tvOS/Views/SourcesPage_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILESRC000000000000 /* Mochi/tvOS/Views/SourcesPage_tvOS.swift */; };
+		TVBFUPD000000000000000000 /* Mochi/tvOS/Views/UpdatePage_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILEUPD000000000000 /* Mochi/tvOS/Views/UpdatePage_tvOS.swift */; };
+		TVBFSEA000000000000000000 /* Mochi/tvOS/Views/SearchPage_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILESEA000000000000 /* Mochi/tvOS/Views/SearchPage_tvOS.swift */; };
+		TVBFDWN000000000000000000 /* Mochi/tvOS/Views/DownloadsPage_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILEDWN0000000000000000 /* Mochi/tvOS/Views/DownloadsPage_tvOS.swift */; };
+		TVBFSET000000000000000000 /* Mochi/tvOS/Views/SettingsView_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = TVFILESET0000000000000000 /* Mochi/tvOS/Views/SettingsView_tvOS.swift */; };
+		TVBFCORINS000000000000000 /* Mochi/core/Installer.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */; };
+		TVBFCORMOD00000000000000 /* Mochi/core/Models.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */; };
+		TVBFCORPER00000000000000 /* Mochi/core/Persistence.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */; };
+		TVBFCORQUE00000000000000 /* Mochi/core/Queue.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */; };
+		TVBFCORRHC00000000000000 /* Mochi/core/RootHelperClient.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A5A5A5A5A5A5A5A5A5A5A5A5 /* Mochi/core/RootHelperClient.swift */; };
+		TVBFCORSIM00000000000000 /* Mochi/core/SimulatorConnector.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A8A8A8A8A8A8A8A8A8A8A8A8 /* Mochi/core/SimulatorConnector.swift */; };
+		TVBFCORITEM0000000000000 /* Mochi/Item.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */; };
+		TVBFCORMAIN0000000000000 /* Mochi/MochiApp.swift in tvOS Sources */ = {isa = PBXBuildFile; fileRef = A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */; };
+
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8B8B8B8B8B8B8B8B8B8B8B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E1E1E11E1E1E1E1E1E1E8;
+			remoteInfo = RootHelper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/AddSourceView_iOS.swift; sourceTree = "<group>"; };
+		1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/ContentView_iOS.swift; sourceTree = "<group>"; };
+		2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/UpdatePage_iOS.swift; sourceTree = "<group>"; };
+		2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/SearchPage_iOS.swift; sourceTree = "<group>"; };
+		2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/Helpers_iOS.swift; sourceTree = "<group>"; };
+		3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/OtherPages_iOS.swift; sourceTree = "<group>"; };
+		4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/Views/SourcesPage_iOS.swift; sourceTree = "<group>"; };
+		5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/AppState_iOS.swift; sourceTree = "<group>"; };
 		904825732FC04BBB001A43CC /* Mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "procursus-bootstrap.sh"; sourceTree = "<group>"; };
+		9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RootHelper/RootHelper.xcodeproj; sourceTree = "<group>"; };
+		A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Models.swift; sourceTree = "<group>"; };
+		A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Installer.swift; sourceTree = "<group>"; };
+		A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Persistence.swift; sourceTree = "<group>"; };
+		A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/Queue.swift; sourceTree = "<group>"; };
+		A5A5A5A5A5A5A5A5A5A5A5A5 /* Mochi/core/RootHelperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/RootHelperClient.swift; sourceTree = "<group>"; };
+		A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/Item.swift; sourceTree = "<group>"; };
+		A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/MochiApp.swift; sourceTree = "<group>"; };
+		A8A8A8A8A8A8A8A8A8A8A8A8 /* Mochi/core/SimulatorConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/core/SimulatorConnector.swift; sourceTree = "<group>"; };
+		A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mochi/iOS-legacy/LegacyViews_iOS.swift"; sourceTree = "<group>"; };
+		WF1F1F1F1F1F1F1F1F1F1F1F1 /* Mochi/watchOS/Views/ContentViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/ContentViews_watchOS.swift; sourceTree = "<group>"; };
+		WF2F2F2F2F2F2F2F2F2F2F2F2 /* Mochi/watchOS/Views/BrowseViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/BrowseViews_watchOS.swift; sourceTree = "<group>"; };
+		WF3F3F3F3F3F3F3F3F3F3F3F3 /* Mochi/watchOS/Views/SearchViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/SearchViews_watchOS.swift; sourceTree = "<group>"; };
+		WF4F4F4F4F4F4F4F4F4F4F4F4 /* Mochi/watchOS/Views/PackagesViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/PackagesViews_watchOS.swift; sourceTree = "<group>"; };
+		WF5F5F5F5F5F5F5F5F5F5F5F5 /* Mochi/watchOS/Views/SourcesViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/SourcesViews_watchOS.swift; sourceTree = "<group>"; };
+		WF6F6F6F6F6F6F6F6F6F6F6F6 /* Mochi/watchOS/Views/UpdatesViews_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/Views/UpdatesViews_watchOS.swift; sourceTree = "<group>"; };
+		WF7F7F7F7F7F7F7F7F7F7F7F7 /* Mochi/watchOS/AppState_watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/watchOS/AppState_watchOS.swift; sourceTree = "<group>"; };
+		TVFILECONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/ContentView_tvOS.swift; sourceTree = "<group>"; };
+		TVFILEAPPST00000000000000 /* Mochi/tvOS/AppState_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/AppState_tvOS.swift; sourceTree = "<group>"; };
+		TVFILEBRW0000000000000000 /* Mochi/tvOS/Views/BrowsePage_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/BrowsePage_tvOS.swift; sourceTree = "<group>"; };
+		TVFILESRC000000000000 /* Mochi/tvOS/Views/SourcesPage_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/SourcesPage_tvOS.swift; sourceTree = "<group>"; };
+		TVFILEUPD000000000000 /* Mochi/tvOS/Views/UpdatePage_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/UpdatePage_tvOS.swift; sourceTree = "<group>"; };
+		TVFILESEA000000000000 /* Mochi/tvOS/Views/SearchPage_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/SearchPage_tvOS.swift; sourceTree = "<group>"; };
+		TVFILEDWN0000000000000000 /* Mochi/tvOS/Views/DownloadsPage_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/DownloadsPage_tvOS.swift; sourceTree = "<group>"; };
+		TVFILESET0000000000000000 /* Mochi/tvOS/Views/SettingsView_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/Views/SettingsView_tvOS.swift; sourceTree = "<group>"; };
+
+		B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iOS/RootHelperClient_iOS.swift; sourceTree = "<group>"; };
+		E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/iPadOS/ContentView_iPadOS.swift; sourceTree = "<group>"; };
+		E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift"; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		WFAPP000000000000000000 /* MochiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MochiWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		WFEXT0000000000000000 /* MochiWatchKitExtension.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MochiWatchKitExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		TVFILECONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/ContentView_tvOS.swift; sourceTree = "<group>"; };
+		TVFILEAPPST00000000000000 /* Mochi/tvOS/AppState_tvOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mochi/tvOS/AppState_tvOS.swift; sourceTree = "<group>"; };
+		TVAPP000000000000000000 /* Mochi tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mochi tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -31,15 +126,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCCCCCCCCCCCCCCCCCCCCCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		TVFWPH000000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90181CBF2FC3A88E00B826B6 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1F1F1F1F1F1F1F1F1F1F1F1F /* Mochi/iOS/ContentView_iOS.swift */,
+				2F2F2F2F2F2F2F2F2F2F2F2F /* Mochi/iOS/Views/Helpers_iOS.swift */,
+				3F3F3F3F3F3F3F3F3F3F3F3F /* Mochi/iOS/Views/OtherPages_iOS.swift */,
+				4F4F4F4F4F4F4F4F4F4F4F4F /* Mochi/iOS/Views/SourcesPage_iOS.swift */,
+				2A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/iOS/Views/UpdatePage_iOS.swift */,
+				2B2B2B2B2B2B2B2B2B2B2B2B2 /* Mochi/iOS/Views/SearchPage_iOS.swift */,
+				A2A2A2A2A2A2A2A2A2A2A2A2 /* Mochi/core/Installer.swift */,
+				A1A1A1A1A1A1A1A1A1A1A1A1 /* Mochi/core/Models.swift */,
+				A4A4A4A4A4A4A4A4A4A4A4A4 /* Mochi/core/Queue.swift */,
+				A8A8A8A8A8A8A8A8A8A8A8A8 /* Mochi/core/SimulatorConnector.swift */,
+				A5A5A5A5A5A5A5A5A5A5A5A5 /* Mochi/core/RootHelperClient.swift */,
+				A6A6A6A6A6A6A6A6A6A6A6A6 /* Mochi/Item.swift */,
+				A7A7A7A7A7A7A7A7A7A7A7A7 /* Mochi/MochiApp.swift */,
+				5A5A5A5A5A5A5A5A5A5A5A5A5A /* Mochi/iOS/AppState_iOS.swift */,
+				E0E0E0E0E0E0E0E0E0E0E0E0 /* Mochi/iPadOS/ContentView_iPadOS.swift */,
+				B1B1B1B1B1B1B1B1B1B1B1B1 /* Mochi/iOS/RootHelperClient_iOS.swift */,
+				0A0A0A0A0A0A0A0A0A0A0A0A /* Mochi/iOS/AddSourceView_iOS.swift */,
+				A3A3A3A3A3A3A3A3A3A3A3A3 /* Mochi/core/Persistence.swift */,
+				A9A9A9A9A9A9A9A9A9A9A9A9 /* Mochi/iOS-legacy/LegacyViews_iOS.swift */,
+				E3E3E3E3E3E3E3E3E3E3E3E3 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift */,
+				WF1F1F1F1F1F1F1F1F1F1F1F1 /* Mochi/watchOS/Views/ContentViews_watchOS.swift */,
+				WF2F2F2F2F2F2F2F2F2F2F2F2 /* Mochi/watchOS/Views/BrowseViews_watchOS.swift */,
+				WF3F3F3F3F3F3F3F3F3F3F3F3 /* Mochi/watchOS/Views/SearchViews_watchOS.swift */,
+				WF4W4W4W4W4W4W4W4W4W4W4W4 /* Mochi/watchOS/Views/PackagesViews_watchOS.swift */,
+				WF5F5F5F5F5F5F5F5F5F5F5F5 /* Mochi/watchOS/Views/SourcesViews_watchOS.swift */,
+				WF6F6F6F6F6F6F6F6F6F6F6F6 /* Mochi/watchOS/Views/UpdatesViews_watchOS.swift */,
+				TVFILECONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift */,
+				TVFILEAPPST00000000000000 /* Mochi/tvOS/AppState_tvOS.swift */,
+				TVFILEBRW0000000000000000 /* Mochi/tvOS/Views/BrowsePage_tvOS.swift */,
+				TVFILESRC000000000000 /* Mochi/tvOS/Views/SourcesPage_tvOS.swift */,
+				TVFILEUPD000000000000 /* Mochi/tvOS/Views/UpdatePage_tvOS.swift */,
+				TVFILESEA000000000000 /* Mochi/tvOS/Views/SearchPage_tvOS.swift */,
+				TVFILEDWN0000000000000000 /* Mochi/tvOS/Views/DownloadsPage_tvOS.swift */,
+				TVFILESET0000000000000000 /* Mochi/tvOS/Views/SettingsView_tvOS.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		9048256A2FC04BBB001A43CC = {
 			isa = PBXGroup;
 			children = (
 				904825752FC04BBB001A43CC /* Mochi */,
 				904825742FC04BBB001A43CC /* Products */,
 				90656E2C2FC0ED5800D3AE5D /* procursus-bootstrap.sh */,
+				9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */,
+				90181CBF2FC3A88E00B826B6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +199,17 @@
 			isa = PBXGroup;
 			children = (
 				904825732FC04BBB001A43CC /* Mochi.app */,
+				FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */,
+				WFAPP000000000000000000 /* Mochi Watch.app */,
+				WFEXT0000000000000000 /* Mochi WatchKit Extension.appex */,
+				TVAPP000000000000000000 /* Mochi tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90656E822FC159A700D3AE5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +228,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7C7C7C7C7C7C7C7C7C7C7C7C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				904825752FC04BBB001A43CC /* Mochi */,
@@ -74,6 +238,101 @@
 			);
 			productName = Mochi;
 			productReference = 904825732FC04BBB001A43CC /* Mochi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		WEXTTTTTTTTTTTTTTTTTTTTTT /* Mochi WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = WEXTCL000000000000000000 /* Build configuration list for PBXNativeTarget "Mochi WatchKit Extension" */;
+			buildPhases = (
+				WSPHXXXXXXXXXXXXXXX /* Sources */,
+				WFWRESXXXXXXXXXXXXX /* Resources */,
+				WEXTCP000000000000000000 /* Embed helper for extension (none) */,
+				WEXTRM000000000000000000 /* Remove preview dylib script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mochi WatchKit Extension";
+			packageProductDependencies = (
+			);
+			productName = MochiWatchKitExtension;
+			productReference = WFEXT0000000000000000 /* Mochi WatchKit Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		WAPPXXXXXXXXXXXXXXX /* Mochi WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = WAPPCL000000000000000000 /* Build configuration list for PBXNativeTarget "Mochi WatchKit App" */;
+			buildPhases = (
+				WAPPCP000000000000000000 /* Embed WatchKit Extension */,
+				WAPPRM000000000000000000 /* Remove embedded extension preview dylib */,
+				WAPPRESXXXXXXXXXXXXX /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				WAPPTD000000000000000000 /* PBXTargetDependency */,
+			);
+			name = "Mochi WatchKit App";
+			packageProductDependencies = (
+			);
+			productName = Mochi;
+			productReference = WFAPP000000000000000000 /* Mochi Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		WAPPRM000000000000000000 /* Remove embedded extension preview dylib */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			name = "Remove embedded extension preview dylib";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh";
+			shellScript = "rm -f \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/PlugIns/MochiWatchKitExtension.appex/__preview.dylib\" || true";
+		};
+		BBBBBBBBBBBBBBBBBBBBBBBB /* Mochi iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = HHHHHHHHHHHHHHHHHHHHHHHH /* Build configuration list for PBXNativeTarget "Mochi iOS" */;
+			buildPhases = (
+				EEEEEEEEEEEEEEEEEEEEEEEE /* Sources */,
+				CCCCCCCCCCCCCCCCCCCCCCCC /* Frameworks */,
+				DDDDDDDDDDDDDDDDDDDDDDDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				777777777777777777777777 /* PBXTargetDependency */,
+			);
+			name = "Mochi iOS";
+			packageProductDependencies = (
+			);
+			productName = Mochi;
+			productReference = FFFFFFFFFFFFFFFFFFFFFFFF /* Mochi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		TVTGT000000000000000000 /* Mochi tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TVCFGCL0000000000000000 /* Build configuration list for PBXNativeTarget "Mochi tvOS" */;
+			buildPhases = (
+				TVSRCSPH0000000000000000 /* Sources */,
+				TVFWPH000000000000000000 /* Frameworks */,
+				TVRESPH000000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+			);
+			name = "Mochi tvOS";
+			packageProductDependencies = (
+			);
+			productName = Mochi;
+			productReference = TVAPP000000000000000000 /* Mochi tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,9 +362,19 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 904825742FC04BBB001A43CC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 90656E822FC159A700D3AE5D /* Products */;
+					ProjectRef = 9A9A9A9A9A9A9A9A9A9A9A9A /* RootHelper/RootHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				904825722FC04BBB001A43CC /* Mochi */,
+				BBBBBBBBBBBBBBBBBBBBBBBB /* Mochi iOS */,
+				WEXTTTTTTTTTTTTTTTTTTTTTT /* Mochi WatchKit Extension */,
+				WAPPXXXXXXXXXXXXXXX /* Mochi WatchKit App */,
+				TVTGT000000000000000000 /* Mochi tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +388,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDDDDDDDDDDDDDDDDDDDDDDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		TVRESPH000000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -129,9 +412,314 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		WSPHXXXXXXXXXXXXXXX /* WatchKit Extension Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				W1W1W1W1W1W1W1W1W1W1W1W1W1 /* Mochi/watchOS/ContentView_watchOS.swift in Sources */,
+				W2W2W2W2W2W2W2W2W2W2W2W2W2 /* Mochi/watchOS/Views/BrowseViews_watchOS.swift in Sources */,
+				W3W3W3W3W3W3W3W3W3W3W3W3W3 /* Mochi/watchOS/Views/SearchViews_watchOS.swift in Sources */,
+				W4W4W4W4W4W4W4W4W4W4W4W4W4 /* Mochi/watchOS/Views/PackagesViews_watchOS.swift in Sources */,
+				W5W5W5W5W5W5W5W5W5W5W5W5W5 /* Mochi/watchOS/Views/SourcesViews_watchOS.swift in Sources */,
+				W6W6W6W6W6W6W6W6W6W6W6W6W6 /* Mochi/watchOS/Views/UpdatesViews_watchOS.swift in Sources */,
+				W7W7W7W7W7W7W7W7W7W7W7W7W7 /* Mochi/watchOS/AppState_watchOS.swift in Sources */,
+				C2C2C2C2C2C2C2C2C2C2C2C2C /* Mochi/core/Models.swift in Sources */,
+				/* Mochi/core/Installer.swift removed from WatchKit Extension sources */
+				C3C3C3C3C3C3C3C3C3C3C3C3C /* Mochi/core/Persistence.swift in Sources */,
+				C4C4C4C4C4C4C4C4C4C4C4C4C /* Mochi/core/Queue.swift in Sources */,
+				C6C6C6C6C6C6C6C6C6C6C6C6C /* Mochi/Item.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WEXTRM000000000000000000 /* Remove preview dylib script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			name = "Remove preview dylib";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh";
+			shellScript = "rm -f \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/__preview.dylib\" || true";
+		};
+		WFWRESXXXXXXXXXXXXX /* WatchKit Extension Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WEXTCP000000000000000000 /* Embed helper for extension (none) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Embed WK Extension";
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WAPPCP000000000000000000 /* Embed WatchKit Extension */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				WAPPEXTBUILD000000000000000 /* Mochi WatchKit Extension.appex in CopyFiles */,
+			);
+			name = "Embed WatchKit Extension";
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		WAPPEXTBUILD000000000000000 /* Mochi WatchKit Extension.appex in CopyFiles */ = {isa = PBXBuildFile; fileRef = WFEXT0000000000000000 /* Mochi WatchKit Extension.appex */; };
+		WAPPRESXXXXXXXXXXXXX /* WatchKit App Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEEEEEEEEEEEEEEEEEEEEEEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5F5F5F5F5F5F5F5F5F5F5F /* Mochi/iOS/ContentView_iOS.swift in Sources */,
+				E1E1E1E1E1E1E1E1E1E1E1E1 /* Mochi/iPadOS/ContentView_iPadOS.swift in Sources */,
+				D8D8D8D8D8D8D8D8D8D8D8D8D8 /* Mochi/iOS/AppState_iOS.swift in Sources */,
+				6F6F6F6F6F6F6F6F6F6F6F6F /* Mochi/iOS/Views/Helpers_iOS.swift in Sources */,
+				0B0B0B0B0B0B0B0B0B0B0B0B /* Mochi/iOS/AddSourceView_iOS.swift in Sources */,
+				7F7F7F7F7F7F7F7F7F7F7F7F /* Mochi/iOS/Views/OtherPages_iOS.swift in Sources */,
+				8F8F8F8F8F8F8F8F8F8F8F8F /* Mochi/iOS/Views/SourcesPage_iOS.swift in Sources */,
+				C1C1C1C1C1C1C1C1C1C1C1C1C /* Mochi/core/Installer.swift in Sources */,
+				C2C2C2C2C2C2C2C2C2C2C2C2C /* Mochi/core/Models.swift in Sources */,
+				C3C3C3C3C3C3C3C3C3C3C3C3C /* Mochi/core/Persistence.swift in Sources */,
+				C4C4C4C4C4C4C4C4C4C4C4C4C /* Mochi/core/Queue.swift in Sources */,
+				C8C8C8C8C8C8C8C8C8C8C8C8C /* Mochi/iOS-legacy/LegacyViews_iOS.swift in Sources */,
+				E2E2E2E2E2E2E2E2E2E2E2E2 /* Mochi/iPadOS-legacy/LegacyViews_iPadOS.swift in Sources */,
+				B8B8B8B8B8B8B8B8B8B8B8B8 /* Mochi/iOS/RootHelperClient_iOS.swift in Sources */,
+				313131313131313131313131 /* Mochi/iOS/Views/UpdatePage_iOS.swift in Sources */,
+				323232323232323232323232 /* Mochi/iOS/Views/SearchPage_iOS.swift in Sources */,
+				C6C6C6C6C6C6C6C6C6C6C6C6C /* Mochi/Item.swift in Sources */,
+				C7C7C7C7C7C7C7C7C7C7C7C7C /* Mochi/MochiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		TVSRCSPH0000000000000000 /* tvOS Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+					TVBFCORINS000000000000000 /* Mochi/core/Installer.swift in tvOS Sources */,
+					TVBFCORMOD00000000000000 /* Mochi/core/Models.swift in tvOS Sources */,
+					TVBFCORPER00000000000000 /* Mochi/core/Persistence.swift in tvOS Sources */,
+					TVBFCORQUE00000000000000 /* Mochi/core/Queue.swift in tvOS Sources */,
+					TVBFCORRHC00000000000000 /* Mochi/core/RootHelperClient.swift in tvOS Sources */,
+					TVBFCORSIM00000000000000 /* Mochi/core/SimulatorConnector.swift in tvOS Sources */,
+					TVBFCORITEM0000000000000 /* Mochi/Item.swift in tvOS Sources */,
+					TVBFCORMAIN0000000000000 /* Mochi/MochiApp.swift in tvOS Sources */,
+					TVBFCONT0000000000000000 /* Mochi/tvOS/ContentView_tvOS.swift in Sources */,
+					TVBFAPPST0000000000000000 /* Mochi/tvOS/AppState_tvOS.swift in Sources */,
+					TVBFBRW000000000000000000 /* Mochi/tvOS/Views/BrowsePage_tvOS.swift in Sources */,
+					TVBFSRC000000000000000000 /* Mochi/tvOS/Views/SourcesPage_tvOS.swift in Sources */,
+					TVBFUPD000000000000000000 /* Mochi/tvOS/Views/UpdatePage_tvOS.swift in Sources */,
+					TVBFSEA000000000000000000 /* Mochi/tvOS/Views/SearchPage_tvOS.swift in Sources */,
+					TVBFDWN000000000000000000 /* Mochi/tvOS/Views/DownloadsPage_tvOS.swift in Sources */,
+					TVBFSET000000000000000000 /* Mochi/tvOS/Views/SettingsView_tvOS.swift in Sources */,
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		777777777777777777777777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = 8B8B8B8B8B8B8B8B8B8B8B8B /* PBXContainerItemProxy */;
+		};
+		7C7C7C7C7C7C7C7C7C7C7C7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = 8B8B8B8B8B8B8B8B8B8B8B8B /* PBXContainerItemProxy */;
+		};
+		WAPPTD000000000000000000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = WEXTTTTTTTTTTTTTTTTTTTTTT /* Mochi WatchKit Extension */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		555555555555555555555555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mochi/iOS/Info_iOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mochi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		WAPPDBG000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/watchOS/Info_watchOS.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi.watchkitapp";
+				PRODUCT_NAME = "MochiWatch";
+				SDKROOT = watchsimulator;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+			};
+			name = Debug;
+		};
+		WEXTDBG000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/watchOS/Info_watchOSExtension.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "MochiWatchKitExtension";
+				SDKROOT = watchsimulator;
+				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = NO;
+			};
+			name = Debug;
+		};
+		TVDBG000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/tvOS/Info_tvOS.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = appletvsimulator;
+				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+			};
+			name = Debug;
+		};
+		TVREL000000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/tvOS/Info_tvOS.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = appletvsimulator;
+				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+			};
+			name = Release;
+		};
+		666666666666666666666666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Mochi/iOS/Info_iOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Mochi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
+				PRODUCT_NAME = Mochi;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		WAPPREL000000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/watchOS/Info_watchOS.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi.watchkitapp";
+				PRODUCT_NAME = "MochiWatch";
+				SDKROOT = watchsimulator;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+			};
+			name = Release;
+		};
+		WEXTREL000000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Mochi/watchOS/Info_watchOSExtension.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "MochiWatchKitExtension";
+				SDKROOT = watchsimulator;
+				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = 3294HQD53M;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = NO;
+			};
+			name = Release;
+		};
 		9048257E2FC04BBF001A43CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -257,20 +845,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3294HQD53M;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Mochi/macOS/Info-mac.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,20 +882,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3294HQD53M;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Mochi/macOS/Info-mac.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.evrett-k.Mochi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,7 +935,43 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		HHHHHHHHHHHHHHHHHHHHHHHH /* Build configuration list for PBXNativeTarget "Mochi iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555555555555555555555555 /* Debug */,
+				666666666666666666666666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+		WAPPCL000000000000000000 /* Build configuration list for PBXNativeTarget "Mochi WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				WAPPDBG000000000000000000 /* Debug */,
+				WAPPREL000000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		WEXTCL000000000000000000 /* Build configuration list for PBXNativeTarget "Mochi WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				WEXTDBG000000000000000000 /* Debug */,
+				WEXTREL000000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		TVCFGCL0000000000000000 /* Build configuration list for PBXNativeTarget "Mochi tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TVDBG000000000000000000 /* Debug */,
+				TVREL000000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 	};
 	rootObject = 9048256B2FC04BBB001A43CC /* Project object */;
 }
